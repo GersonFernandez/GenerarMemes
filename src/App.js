@@ -1,9 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
 import html2canvas from 'html2canvas';
-import axios from 'axios';
-
 
 function App() {
 
@@ -31,11 +28,6 @@ function App() {
     })
   }
 
-  const data = function(){
-    const response = axios.get('localhost:44368/weatherforecast').then((res) => {
-      return res;
-    } )
-  }
 
   return (
     <div className="App">
@@ -53,7 +45,7 @@ function App() {
       <div className='meme' id='meme'>
         <span >{linea1}</span><br/>
         <span >{linea2}</span>
-        <img src={"/img/"+ imagen+".jpg"}/>
+        <img src={"/img/"+ imagen+".jpg"} alt="meme"/>
       </div>
     </div>
   );
